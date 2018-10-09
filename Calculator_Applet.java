@@ -2,7 +2,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
-import javax.swing.event.*;
+import javax.swing.*;
 
 public class Calculator_Applet extends JApplet implements ActionListener{
 	JButton b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, plus, minus, multiplication, division, equals, clear;
@@ -13,6 +13,9 @@ public class Calculator_Applet extends JApplet implements ActionListener{
 	public void init() {
 		//sets layout to a BorderLayout In the CENTER.
 		setLayout(new BorderLayout());
+		
+		//sets size of applet
+		setSize(500,400);
 		
 		//Mac code to restore normal JFrame look
 		try {
@@ -223,7 +226,7 @@ public class Calculator_Applet extends JApplet implements ActionListener{
 		JFrame calculator = new JFrame("calculator");
 		
 		calculator.add(applet);
-		calculator.setSize(600, 400);
+		calculator.setSize(500, 400);
 		applet.init();
 		calculator.setVisible(true);
 	}
